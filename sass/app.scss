@@ -1,0 +1,35 @@
+// Set the global compass vars.
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+$legacy-support-for-mozilla: false;
+// Import the normalize plugin
+@import "normalize";
+
+@import "foundation";
+
+.head {
+	width: 100%;
+	margin-top : -50px;
+	height: 215px;
+	overflow: hidden;
+	background: url(http://coscup.org/2013-theme/assets/head.jpg) 50% 0% no-repeat rgb(241, 240, 237);
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.content {
+	@extend .center;
+	padding-top: 30px;
+}
+
+.lottery-panel {
+	@include panel;
+	margin: 20px 50px;
+	display: none;
+}
