@@ -28,7 +28,7 @@ class MetadataReader extends CSVReader
 class ListReader extends CSVReader
 	constructor: (@csv_resource) ->
 		super(@csv_resource)
-		@list = _.compact(_.flatten(@data))
+		@list = _.compact(_.flatten(@data))	
 		console.log @list
 
 	random_get: ->

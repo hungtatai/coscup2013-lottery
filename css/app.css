@@ -6257,13 +6257,12 @@ a.th {
 /* line 11, ../sass/app.scss */
 .head {
   width: 100%;
-  margin-top: -50px;
   height: 215px;
   overflow: hidden;
   background: url(http://coscup.org/2013-theme/assets/head.jpg) 50% 0% no-repeat #f1f0ed;
 }
 
-/* line 19, ../sass/app.scss */
+/* line 18, ../sass/app.scss */
 .center, .content {
   display: block;
   margin-left: auto;
@@ -6271,12 +6270,12 @@ a.th {
   text-align: center;
 }
 
-/* line 26, ../sass/app.scss */
+/* line 25, ../sass/app.scss */
 .content {
   padding-top: 30px;
 }
 
-/* line 31, ../sass/app.scss */
+/* line 30, ../sass/app.scss */
 .lottery-panel {
   border-style: solid;
   border-width: 1px;
