@@ -93,10 +93,11 @@ list_csv = "data/COSCUP2013 All badge code - list.csv";
 metadata_csv = "data/COSCUP2013 All badge code - MetaData.csv";
 
 $.get(list_csv).done(function(list_csv_data) {
-  window.list_csv = new ListReader(list_csv_data);
-  return $.get(metadata_csv).done(function(metadata_csv_data) {
-    return window.metadata_csv = new MetadataReader(metadata_csv_data);
-  });
+  return window.list_csv = new ListReader(list_csv_data);
+});
+
+$.get(metadata_csv).done(function(metadata_csv_data) {
+  return window.metadata_csv = new MetadataReader(metadata_csv_data);
 });
 
 $(function() {

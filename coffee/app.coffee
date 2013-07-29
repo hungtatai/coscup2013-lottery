@@ -40,8 +40,8 @@ metadata_csv = "data/COSCUP2013 All badge code - MetaData.csv"
 
 $.get(list_csv).done (list_csv_data) ->
 	window.list_csv = new ListReader(list_csv_data)
-	$.get(metadata_csv).done (metadata_csv_data) ->
-		window.metadata_csv = new MetadataReader(metadata_csv_data)
+$.get(metadata_csv).done (metadata_csv_data) ->
+	window.metadata_csv = new MetadataReader(metadata_csv_data)
 		
 $ ->
 	$('.lottery-panel').hide()
