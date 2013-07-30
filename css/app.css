@@ -6307,3 +6307,12 @@ a.th {
 .lottery-panel h1.subheader, .lottery-panel h2.subheader, .lottery-panel h3.subheader, .lottery-panel h4.subheader, .lottery-panel h5.subheader, .lottery-panel h6.subheader {
   line-height: 1.4;
 }
+
+/* line 37, ../sass/app.scss */
+.powered-by small {
+  font-size: 10px;
+}
+/* line 40, ../sass/app.scss */
+.powered-by img {
+  height: 30px;
+}

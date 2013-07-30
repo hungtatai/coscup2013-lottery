@@ -32,3 +32,12 @@ $legacy-support-for-mozilla: false;
 	margin: 20px 50px;
 	display: none;
 }
+
+.powered-by {
+	& small {
+		font-size: 10px;
+	}
+	& img {
+		height: 30px;
+	}
+}
