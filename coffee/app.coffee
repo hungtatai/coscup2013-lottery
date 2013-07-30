@@ -46,7 +46,6 @@ $.get(metadata_csv).done (metadata_csv_data) ->
 $ ->
 	$('.lottery-panel').hide()
 	$('#lottery').click ->
-		window.list_csv.list = ["A1","A2","A3"]
 		window.selected = [] if not window.selected?
 		return if _.difference(window.list_csv.list, window.selected).length == 0
 		while true

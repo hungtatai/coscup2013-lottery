@@ -105,7 +105,6 @@ $(function() {
   return $('#lottery').click(function() {
     var item, meta, people;
 
-    window.list_csv.list = ["A1", "A2", "A3"];
     if (window.selected == null) {
       window.selected = [];
     }
