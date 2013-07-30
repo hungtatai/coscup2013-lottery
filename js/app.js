@@ -109,6 +109,9 @@ $(function() {
     if (window.selected == null) {
       window.selected = [];
     }
+    if (_.difference(window.list_csv.list, window.selected).length === 0) {
+      return;
+    }
     while (true) {
       people = window.list_csv.random_get();
       meta = window.metadata_csv.convert(people[0]);

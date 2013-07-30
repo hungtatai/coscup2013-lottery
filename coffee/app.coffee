@@ -48,6 +48,7 @@ $ ->
 	$('#lottery').click ->
 		window.list_csv.list = ["A1","A2","A3"]
 		window.selected = [] if not window.selected?
+		return if _.difference(window.list_csv.list, window.selected).length == 0
 		while true
 			people = window.list_csv.random_get()
 			meta = window.metadata_csv.convert(people[0])
