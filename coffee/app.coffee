@@ -44,13 +44,18 @@ $.get(metadata_csv).done (metadata_csv_data) ->
   window.metadata_csv = new MetadataReader(metadata_csv_data)
     
 $ ->
-  $('.lottery-panel').hide()
-  $('#lottery').click ->
-    people = window.list_csv.random_get()
-    meta = window.metadata_csv.convert(people[0])
-    item = $("<div class=\"lottery-panel\"><h2>#{meta}</h2><h1>#{people}</h1></div>")
-    $(@).after(item)
-    item.slideDown()
+	$('.lottery-panel').hide()
+	$('#lottery').click ->
+		window.list_csv.list = ["A1","A2","A3"]
+		window.selected = [] if not window.selected?
+		while true
+			people = window.list_csv.random_get()
+			meta = window.metadata_csv.convert(people[0])
+			break if window.selected.indexOf(people) == -1
+		window.selected.push(people)
+		item = $("<div class=\"lottery-panel\"><h2>#{meta}</h2><h1>#{people}</h1></div>")
+		$(@).after(item)
+		item.slideDown()
 
 
 

@@ -105,8 +105,18 @@ $(function() {
   return $('#lottery').click(function() {
     var item, meta, people;
 
-    people = window.list_csv.random_get();
-    meta = window.metadata_csv.convert(people[0]);
+    window.list_csv.list = ["A1", "A2", "A3"];
+    if (window.selected == null) {
+      window.selected = [];
+    }
+    while (true) {
+      people = window.list_csv.random_get();
+      meta = window.metadata_csv.convert(people[0]);
+      if (window.selected.indexOf(people) === -1) {
+        break;
+      }
+    }
+    window.selected.push(people);
     item = $("<div class=\"lottery-panel\"><h2>" + meta + "</h2><h1>" + people + "</h1></div>");
     $(this).after(item);
     return item.slideDown();
